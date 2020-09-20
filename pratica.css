@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #060c21;
+    font-family: 'Poppins' sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060c21;
+    text-align: center;
+    flex-direction: column;
+}
+
+.box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #ffffff;
+    z-index: -1;
+    filter: blur(40px);
+}
+
+.box:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #ffffff;
+    z-index: -1;
+    filter: blur(40px);
+}
+
+.box:before,
+.box:after {
+    background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+}
+
+label {
+    text-align: center;
+    padding: 10px;
+    color: cornsilk;
+    font-size: 14pt;
+    text-shadow: 2px 2px 4px #3f3f3f;
+    font-family: fantasy;
+}
+
+input {
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 40px;
+    margin-left: -57px;
+    margin-top: -20px;
+    border-radius: 7px;
+    transition: all .2s;
+    position: absolute;
+    text-align: center;
+    color: rgb(0, 4, 43);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+}
+
+.btn-white {
+    background-color: #89ff00;
+    color: black;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #00bcd4;
+    color: aliceblue;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.input2 {
+    margin: 40px;
+}
+
+.input2 input {
+    border-radius: 7px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.input2 label {
+    text-align: center;
+    padding: 10px;
+    color: cornsilk;
+    font-size: 14pt;
+    text-shadow: 2px 2px 4px #3f3f3f;
+    font-family: fantasy;
+    margin: 10px;
+}
+
+.input2 {
+    margin-bottom: 40px;
+}
+
+
+/*button:hover {
+    transition: 1s;
+    background: #00bcd4;
+    color: white;
+    font-family: fantasy;
+}
