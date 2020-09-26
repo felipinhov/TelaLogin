@@ -68,6 +68,10 @@ input {
     padding: 5px;
 }
 
+input:placeholder-shown {
+    border-color: #89ff00;
+}
+
 .btn:link,
 .btn:visited {
     text-transform: uppercase;
